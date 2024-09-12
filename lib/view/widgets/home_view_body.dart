@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-
-import '../../constants.dart';
-import 'categories_list_item.dart';
+import '../../components.dart';
+import 'categories_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -10,23 +8,22 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.only(top: 35 ,left: 21),
-          child: Text("Explorer categories" , style: TextStyle(
-            color: primaryColor ,
-            fontSize: 16,
-            fontFamily: "Poppins",
-          ),
-          ),
-        ),
+        const PrimaryText(text: "Explorer categories" , top: 35,),
          SizedBox(height: MediaQuery.of(context).size.height *.028,),
-        const CategoriesListItem(),
+       SizedBox(
+         height: MediaQuery.of(context).size.height * .1,
+         child: const CategoriesListView(),) ,
+       const PrimaryText(text: "Products populars",top: 37,),
+
+
       ],
     );
   }
 }
+
 
 
 

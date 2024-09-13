@@ -12,7 +12,7 @@ class PrimaryText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Padding(
-      padding: EdgeInsets.only(top: top ,left: 21),
+      padding: EdgeInsets.only(top: top ,left: 22),
       child: Text( text , style: const TextStyle(
         color: primaryColor ,
         fontSize: 16,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ui/view/home_view.dart';
-import 'package:ui/view/splash_view.dart';
+import 'package:ui/features/details_feature/view/details_view.dart';
+
+import 'constants.dart';
+import 'features/home_feature/view/home_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +14,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      //theme: ThemeData(scaffoldBackgroundColor: Image.asset("assets/images/image10.png").color ),
+    return  MaterialApp(
+      theme: ThemeData(scaffoldBackgroundColor: primary ),
       debugShowCheckedModeBanner: false,
-      home:  HomeView(),
+      home: const DetailsView(),
     );
   }
 }

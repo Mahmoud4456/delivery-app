@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui/constants.dart';
 
 class ProductPopularItem extends StatelessWidget {
   const ProductPopularItem({super.key});
@@ -8,7 +9,12 @@ class ProductPopularItem extends StatelessWidget {
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.5,
       child: Card(
-        elevation: 5,
+        shape: OutlineInputBorder(
+          borderSide: BorderSide.none,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        color: primary,
+        elevation: 3,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

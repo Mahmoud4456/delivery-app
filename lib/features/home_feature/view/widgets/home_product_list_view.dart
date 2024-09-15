@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:ui/view/widgets/product_popular_item_home.dart';
+import 'package:ui/features/home_feature/view/widgets/product_popular_item_home.dart';
 
 class HomeProductListView extends StatelessWidget {
   const HomeProductListView({super.key});

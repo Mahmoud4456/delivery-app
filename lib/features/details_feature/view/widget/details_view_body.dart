@@ -1,57 +1,56 @@
 import 'package:flutter/material.dart';
-import 'package:ui/constants.dart';
+import 'package:flutter/rendering.dart';
+import 'description_section.dart';
+
 
 class DetailsViewBody extends StatelessWidget {
   const DetailsViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height*.6,
-      child: Stack(
-            children: [
-              ClipPath(
-                clipper: CustomClipImage() ,
-                child: Container(
-                  color: Colors.red,
-                  height: MediaQuery.of(context).size.height*.6,
-                  width: double.infinity,
-                  padding: EdgeInsets.zero,
-                  foregroundDecoration: const BoxDecoration(
-                    image: DecorationImage(image: AssetImage('assets/images/pablo-merchan-montes-dc_JMu8lb5U-unsplash.png' ),
-                      fit: BoxFit.cover,
+   final size =  MediaQuery.of(context).size;
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Stack(
+                children: [
+                  ClipPath(
+                    clipper: CustomClipImage() ,
+                    child: Container(
+                      color: Colors.red,
+                      height: size.height*.6,
+                      width: double.infinity,
+                      padding: EdgeInsets.zero,
+                      foregroundDecoration: const BoxDecoration(
+                        image: DecorationImage(image: AssetImage('assets/images/pablo-merchan-montes-dc_JMu8lb5U-unsplash.png' ),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
                   ),
+                Positioned(
+                  top: size.height *.43,
+                  left: size.width - 100,
+                  child: Container(
+                    padding: const EdgeInsets.all(12),
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color(0xffF1395E),
+                      ),
+                      child: const Icon(Icons.favorite_outline_rounded , color: Colors.white,)),
                 ),
+                ],
               ),
-            Positioned(
-              top: 320,
-              left: MediaQuery.of(context).size.width - 100,
-              child: Container(
-                padding: const EdgeInsets.all(12),
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xffF1395E),
-                  ),
-                  child: const Icon(Icons.favorite_outline_rounded , color: Colors.white,)),
-            ),
-             const Positioned(
-                top: 400,
-                left: 50,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Description",
-                      style: TextStyle(color: primaryColor , fontFamily: "Poppins" , fontSize: 18),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+          const DescriptionSection(),
+        ],
+      ),
     );
   }
 }
+
+
+
 
 
  class CustomClipImage extends CustomClipper<Path>{

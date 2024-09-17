@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui/features/details_feature/view/details_view.dart';
 
+import 'codelab.dart';
 import 'constants.dart';
 import 'features/home_feature/view/home_view.dart';
 

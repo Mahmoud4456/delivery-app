@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui/features/details_feature/view/widget/custom_navigation_bar.dart';
 import 'package:ui/features/details_feature/view/widget/details_view_body.dart';
 
 class DetailsView extends StatelessWidget {
@@ -8,6 +9,7 @@ class DetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: DetailsViewBody(),
+      bottomNavigationBar: CustomNavigationBar(),
     );
   }
 }

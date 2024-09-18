@@ -43,6 +43,7 @@ class DetailsViewBody extends StatelessWidget {
                 ],
               ),
           const DescriptionSection(),
+
         ],
       ),
     );

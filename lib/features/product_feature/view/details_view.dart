@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ui/features/details_feature/view/widget/custom_navigation_bar.dart';
-import 'package:ui/features/details_feature/view/widget/details_view_body.dart';
+import 'package:ui/features/product_feature/view/widget/custom_navigation_bar.dart';
+import 'package:ui/features/product_feature/view/widget/details_view_body.dart';
+
 
 class DetailsView extends StatelessWidget {
   const DetailsView({super.key});
